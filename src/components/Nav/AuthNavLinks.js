@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import './Nav.css';
 export default class AuthLinks extends Component {
+    componentDidMount(){
+        console.log(this.props);
+        
+    }
     render() {
         return (
             <>
@@ -16,17 +20,8 @@ export default class AuthLinks extends Component {
                                     id='nav-logo'
                                 />
                             </NavLink>
-                            <li>
-                                <NavLink to='/activities' id='nav-links'>
-                                    Activities
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to='/friends' id='nav-links'>
-                                    Find Friends
-                                </NavLink>
-                            </li>
-                            <li id='nav-links'>{this.props.username}</li>
+                            
+                            <li id='nav-links'>You</li>
 
                             <li>
                                 <NavLink

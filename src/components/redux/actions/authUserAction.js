@@ -26,7 +26,7 @@ export const loginAPI = (userInfo) => async (dispatch) => {
 
         const { jwtToken } = success.data;
 
-        dispatch(setAuthSuccessUser(jwtToken));
+        dispatch(setAuthSuccessUser(jwtToken),userInfo);
 
         return Promise.resolve();
     } catch (e) {

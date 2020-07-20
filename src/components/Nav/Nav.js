@@ -15,7 +15,8 @@ export class Navbar extends Component {
     
     componentDidMount() {
         const nav = document.getElementById('nav')
-
+        console.log(this.props);
+        
         window.onscroll = function() {
             if (window.pageYOffset > 10) {
                 nav.style.background = 'rgb(38, 38, 39) ';
@@ -37,7 +38,7 @@ export class Navbar extends Component {
                         <ul>
                             <NavLink to='/' id='nav-links'>
                                 <img
-                                    src='images/logo.png'
+                                    src='images/laptop.png'
                                     alt='logo'
                                     id='nav-logo'
                                 />

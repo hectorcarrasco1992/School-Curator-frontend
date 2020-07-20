@@ -13,12 +13,12 @@ export default function (state = initialState, action) {
             };
 
         case LOGIN:
+            console.log("action....",action.payload);
+            
             return {
                 ...state,
                 isAuthenticated: true,
-                user: {
-                    username: action.payload.username,
-                },
+                user: action.payload
             };
 
         case LOGOUT:
