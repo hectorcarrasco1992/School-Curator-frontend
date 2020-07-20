@@ -19,11 +19,11 @@ export class Navbar extends Component {
         
         window.onscroll = function() {
             if (window.pageYOffset > 10) {
-                nav.style.background = 'rgb(38, 38, 39) ';
+                nav.style.background = 'rgb(204, 255, 255) ';
                 // nav.style.boxShadow = '10px 4px 1px black'
             } else {
                 // nav.style.background = 'transparent'
-                nav.style.background = 'rgb(38, 38, 39) ';
+                nav.style.background = 'rgb(255, 255, 204) ';
                 // nav.style.boxShadow = 'none';
             }
         }
@@ -38,7 +38,7 @@ export class Navbar extends Component {
                         <ul>
                             <NavLink to='/' id='nav-links'>
                                 <img
-                                    src='images/laptop.png'
+                                    src='images/logo.png'
                                     alt='logo'
                                     id='nav-logo'
                                 />

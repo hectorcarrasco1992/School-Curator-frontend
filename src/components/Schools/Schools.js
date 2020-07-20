@@ -12,7 +12,7 @@ export  class Schools extends Component {
     }
     async componentDidMount (){
         try {
-             await this.props.schoolAPI()
+            await this.props.schoolAPI()
             //console.log(list);
             this.setState({
                 mySchools:[...this.props.schoolLists.schools]
@@ -33,9 +33,13 @@ export  class Schools extends Component {
                 {this.state.mySchools.map((item)=>{
                     return(<div class="holder">
                     <div class="item place">
-                      <div class="imageHolder"></div>
+                      <div class="imageHolder">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&dpr=2&auto=format&fit=crop&w=525&q=60" alt=""/>
+                      </div>
                       <div class="details">
-                        <div class="type"></div>
+                        <div class="type">
+                          <img src={item.thumb} alt=""/>
+                        </div>
                         <div class="meta">
                           <p class="title">
                             {item.name}
