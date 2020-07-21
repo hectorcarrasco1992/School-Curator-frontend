@@ -37,11 +37,11 @@ export class Navbar extends Component {
                     <div className='navbar' id='nav'>
                         <ul>
                             <NavLink to='/' id='nav-links'>
-                                <img
+                                {/* <img
                                     src='images/logo.png'
                                     alt='logo'
                                     id='nav-logo'
-                                />
+                                /> */}
                             </NavLink>
 
                             <nav>

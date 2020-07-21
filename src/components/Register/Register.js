@@ -9,6 +9,7 @@ import { successToast, failureToast } from '../Toastify/Toast';
 
 import { signupAPI } from '../redux/actions/authUserAction';
 
+
 import './Register.css';
 export class Register extends Component {
     state = {

@@ -7,8 +7,10 @@ import { loginAPI } from '../redux/actions/authUserAction';
 import InputGroup from '../shared/InputGroup';
 import ButtonGroup from '../shared/ButtonGroup';
 
+
 import { successToast, failureToast } from '../Toastify/Toast';
 
+import "./Login.css"
 export class Login extends Component {
     state = {
         canSubmit: true,
@@ -123,80 +125,81 @@ export class Login extends Component {
             }
         };
 
-           onSubmit = async (event, dispatch) => {
-               event.preventDefault();
-               const { email, password } = this.state.formConfig;
-               try {
-                   let inputForm = {
-                       ...this.state.formSetting,
-                   };
+        onSubmit = async (event, dispatch) => {
+            event.preventDefault();
+            const { email, password } = this.state.formConfig;
+                try {
+                    let inputForm = {
+                    ...this.state.formSetting,
+                    };
 
-                   await this.props.loginAPI({
-                       email: email.value,
-                       password: password.value,
-                   });
+                    await this.props.loginAPI({
+                        email: email.value,
+                        password: password.value,
+                    });
 
-                   inputForm['email'].value = '';
-                   inputForm['password'].value = '';
+                    inputForm['email'].value = '';
+                    inputForm['password'].value = '';
 
-                   successToast('🐒Welcome Back!');
+                    successToast('🐒Welcome Back!');
 
-                   this.props.history.push('/');
-               } catch (e) {
-                   failureToast(e);
-               }
-           };
+                    this.props.history.push('/');
+                } catch (e) {
+                    failureToast(e);
+                }
+        };
 
-           render() {
-               const { canSubmit, formSetting } = this.state;
-               let inputArray = [];
-               for (let key in formSetting) {
-                   inputArray.push({
-                       formSetting: formSetting[key],
-                   });
-               }
-               return (
-                   <>
-                       <div className=''>
-                           <form
-                               className='login-box'
-                               onSubmit={this.onSubmit}
-                               >
-                               <h1>Login</h1>
-                               {inputArray.map((element) => {
-                                   const {
-                                       formSetting: {
-                                           name,
-                                           iconName,
-                                           placeholder,
-                                           value,
-                                           error,
-                                       },
-                                   } = element;
-                                   return (
-                                       <InputGroup
-                                           key={name}
-                                           name={name}
-                                           iconName={iconName}
-                                           placeholder={placeholder}
-                                           onChange={this.onChange}
-                                           value={value}
-                                           error={error}
-                                           type={name}
-                                       />
-                                   );
-                               })}
-                               <ButtonGroup
-                                   buttonStyle='btn'
-                                   title='Sign in'
-                                   disabled={canSubmit}
-                               />
-                           </form>
-                       </div>
-                   </>
-               );
-           }
-       }
+        render() {
+            const { canSubmit, formSetting } = this.state;
+            let inputArray = [];
+            for (let key in formSetting) {
+                inputArray.push({
+                    formSetting: formSetting[key],
+                });
+            }
+            return (
+                <>
+                    <div className=''>
+                        <form
+                            className='login-box'
+                            onSubmit={this.onSubmit}
+                        >
+                            <h1>Login</h1>
+                            {inputArray.map((element) => {
+                                const {
+                                    formSetting: {
+                                        name,
+                                        iconName,
+                                        placeholder,
+                                        value,
+                                        error,
+                                    },
+                                } = element;
+                                return (
+                                    <InputGroup
+                                        key={name}
+                                        name={name}
+                                        iconName={iconName}
+                                        placeholder={placeholder}
+                                        onChange={this.onChange}
+                                        value={value}
+                                        error={error}
+                                        type={name}
+                                    />
+                                );
+                            })}
+                            <ButtonGroup
+                                buttonStyle='btn'
+                                title='Sign in'
+                                disabled={canSubmit}
+                            />
+                        </form>
+                    </div>
+                    
+                </>
+            );
+        }
+    }
 
 
 const mapStateToProps = (state) => ({});

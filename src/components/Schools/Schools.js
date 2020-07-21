@@ -34,7 +34,7 @@ export  class Schools extends Component {
                     return(<div class="holder">
                     <div class="item place">
                       <div class="imageHolder">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&dpr=2&auto=format&fit=crop&w=525&q=60" alt=""/>
+                        <img src={item.image} alt=""/>
                       </div>
                       <div class="details">
                         <div class="type">

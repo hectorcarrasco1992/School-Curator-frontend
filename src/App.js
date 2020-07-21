@@ -7,6 +7,8 @@ import checkTokenAuth from './components/lib/helpers/checkTokenAuth';
 import { Provider } from 'react-redux';
 import store from './components/redux/store/store';
 
+
+
 import './App.css';
 
 checkTokenAuth(store);
@@ -19,7 +21,9 @@ export default class App extends Component {
                         <MainRouter />
                     </React.Suspense>
                 </Router>
+                
             </Provider>
+            
         );
     }
 }

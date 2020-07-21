@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import Nav from './components/Nav/Nav'
 import Login from './components/Login/Login'
 import Schools from "./components/Schools/Schools"
+import Footer from "./components/Footer/Footer";
 
 export default class MainRouter extends Component {
     render() {
@@ -23,6 +24,8 @@ export default class MainRouter extends Component {
 
                     
                 </Switch>
+
+                
             </>
         );
     }
