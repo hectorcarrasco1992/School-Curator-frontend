@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import{connect} from 'react-redux'
 import{schoolAPI} from "../redux/actions/schoolActions"
 
+
 import "./Schools.css"
+
 
 //import PropTypes from 'prop-types'
 
@@ -29,9 +31,10 @@ export  class Schools extends Component {
 
     render() {
         return (
-            <>
-                {this.state.mySchools.map((item)=>{
-                    return(<div class="holder">
+            <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
+              
+                {this.props.schoolLists.schools.map((item)=>{
+                    return(<div class="holder" style={{flexDirection:"column"}}>
                     <div class="item place">
                       <div class="imageHolder">
                         <img src={item.image} alt=""/>
@@ -63,7 +66,9 @@ export  class Schools extends Component {
                     </div>
                   </div>)
                 })}
-            </>
+
+                
+            </div>
         )
     }
 }

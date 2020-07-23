@@ -5,6 +5,6 @@ import schoolReducer from './schoolReducer'
 
 export default combineReducers({
     authUser: authUserReducer,
-    schools:schoolReducer
+    schools: schoolReducer
     
 });

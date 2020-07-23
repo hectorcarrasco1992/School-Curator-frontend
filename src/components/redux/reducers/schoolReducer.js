@@ -14,7 +14,12 @@ export default function(state = initialState,action){
             }
         case ADD_SCHOOL:
             console.log("hit Add School");
-            return;
+            return{
+                ...state,
+                schools:[...action.payload]
+            }
+
+            
             
     
         default:
