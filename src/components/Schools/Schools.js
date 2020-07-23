@@ -31,33 +31,33 @@ export  class Schools extends Component {
         return (
             <>
                 {this.state.mySchools.map((item)=>{
-                    return(<div class="holder">
-                    <div class="item place">
-                      <div class="imageHolder">
+                    return(<div className="holder">
+                    <div className="item place">
+                      <div className="imageHolder">
                         <img src={item.image} alt=""/>
                       </div>
-                      <div class="details">
-                        <div class="type">
+                      <div className="details">
+                        <div className="type">
                           <img src={item.thumb} alt=""/>
                         </div>
-                        <div class="meta">
-                          <p class="title">
+                        <div className="meta">
+                          <p className="title">
                             {item.name}
                           </p>
-                          <p class="info">
+                          <p className="info">
                           {item.missionStatement}<br/><br/>
                           </p>
-                          <p class="info">
+                          <p className="info">
                             Contact:<a target="blank" href={"mailto:"+ item.contact}>{item.contact}</a><br/><br/>
                           </p>
-                          <p class="info">
+                          <p className="info">
                             WebSite:<a href={item.website} target="blank">{item.website}</a><br/><br/>
                           </p>
                         </div>
-                        <div class="extra">
-                          <p class="rating">9.8/10</p>
-                          <div class="ratingBar"><div class="green"></div></div>
-                          <p class="info">(320 Ratings)</p>
+                        <div className="extra">
+                          <p className="rating">9.8/10</p>
+                          <div className="ratingBar"><div className="green"></div></div>
+                          <p className="info">(320 Ratings)</p>
                         </div>
                       </div>
                     </div>
