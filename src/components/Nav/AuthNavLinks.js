@@ -21,7 +21,7 @@ export default class AuthLinks extends Component {
                                 />
                             </NavLink>
                             
-                            <li id='nav-links'>You</li>
+                            {/* <li id='nav-links'>You</li> */}
 
                             <li>
                                 <NavLink
